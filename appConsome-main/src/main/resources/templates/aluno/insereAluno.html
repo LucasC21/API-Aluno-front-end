@@ -1,0 +1,38 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+	<title>Cadastra Aluno</title>
+</head>
+
+<body>
+	<h1>CADASTRAR ALUNO</h1>
+	<form class="form-inline" method="POST" th:action="@{/aluno/salva}">
+		<div class="mb-3">
+			<label for="nome" class="form-label">Nome: </label>
+			<input type="text" class="form-control" name="nome" th:value="${aluno.nome}" placeholder="nome completo" />
+		</div>
+		<div class="mb-3">
+			<label for="idade" class="form-label">Idade: </label>
+			<input type="number" class="form-control" name="idade" th:value="${aluno.idade}" placeholder="idade" />
+		</div>
+		<div class="mb-3">
+			<label for="sexo" class="form-label">Sexo: </label>
+			<input type="text" class="form-control" name="sexo" th:value="${aluno.sexo}" placeholder="sexo" />
+		</div>
+		<div class="mb-3">
+			<label for="curso" class="form-label">Curso: </label>
+			<input type="text" class="form-control" name="curso" th:value="${aluno.curso}" placeholder="curso" />
+		</div>
+		<div class="mb-3">
+			<label for="campus" class="form-label">Campus: </label>
+			<input type="text" class="form-control" name="campus" th:value="${aluno.campus}" placeholder="campus" />
+		</div>
+		<button type="submit" class="btn btn-primary">Salvar</button>
+	</form>
+</body>
+
+</html>
